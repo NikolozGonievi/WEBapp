@@ -11,27 +11,36 @@ body {
     padding-left: 15px;
     padding-right: 15px;
 }
-
-/* Carousel */
-.carousel-caption p {
-    font-size: 20px;
-    line-height: 1.4;
+.col-4{
+    width:30%;    
+    display:inline-block;
+    overflow:hidden;
+    float:right;
+    margin:10px;
+}
+.news-container{
+    padding:5px;
+    border:1px solid #ddd;    
+    height:300px;
 }
 
-/* Make .svg files in the carousel display properly in older browsers */
-.carousel-inner .item img[src$=".svg"] {
-    width: 100%;
+.news-container img, .news-detail img{
+    width:50%;
 }
 
-/* QR code generator */
-#qrCode {
-    margin: 15px;
+
+.news-container h2{
+    width:100%;
+    font-size:16px;
+    margin-top:8px;
+    display:inline-block;
+    white-space:nowrap;
+    overflow:hidden !important;
+    text-overflow:ellipsis;
 }
 
-/* Hide/rearrange for smaller screens */
-@media screen and (max-width: 767px) {
-    /* Hide captions */
-    .carousel-caption {
-        display: none;
-    }
+.news-container p{
+    height:90px;
+    overflow:hidden;
+    font-size:16px;
 }

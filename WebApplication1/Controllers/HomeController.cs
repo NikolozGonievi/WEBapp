@@ -15,23 +15,15 @@ namespace WebApplication1.Controllers
             return View();
         }
 
-        public IActionResult About()
+        public IActionResult NewsList()
         {
-            ViewData["Message"] = "Your application description page.";
-
-            return View();
+            return View(NewsVM.data);
         }
 
-        public IActionResult Contact()
+        public IActionResult News(int id)
         {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
+            var model = NewsVM.data.Where(x => x.Id == id).FirstOrDefault();
+            return View(model);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
